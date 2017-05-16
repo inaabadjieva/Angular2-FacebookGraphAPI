@@ -1,0 +1,7 @@
+<h2>Extract Statistics</h2>
+<input  class="form-control" [formControl]="url" placeholder="Enter Facebook URL">
+<button class="btn btn-success" (click)="getLatestEvents()">Get Latest Events</button>
+<button class="btn btn-success" (click)="getUsers()">Get Top Users</button>
+
+<events-list *ngIf="showEvents" [latestEvents]="latestEvents"></events-list> 
+<users-list *ngIf="showUsers" [mostActive]="mostActive"></users-list>

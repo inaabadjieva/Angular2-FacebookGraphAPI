@@ -1,0 +1,18 @@
+.users {
+	margin: 0 0 2em 0;
+	list-style-type: none;
+	padding: 0;
+	width: 30em;
+}
+.users li {
+	position: relative;
+	left: 0;
+	background-color: #EEE;
+	margin: .5em;
+	padding: .3em 0;
+	border-radius: 4px;
+}
+.users .text {
+	position: relative;
+	top: -3px;
+}

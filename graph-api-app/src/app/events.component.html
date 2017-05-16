@@ -1,0 +1,15 @@
+<h3>Latest events</h3>
+<ul class="events">
+	<li *ngFor="let event of latestEvents" 
+	[class.selected]="event === selectedEvent"
+	(click)="onSelect(event)">
+		<h5>{{ event.name }}</h5>
+		<img src="{{ event.photo }}" alt="eventPhoto">
+		<div *ngIf="selectedEvent === event">
+			<h2>{{ selectedEvent.name }}</h2>
+			<div><label>date:</label>{{ selectedEvent.start_time }} - {{ selectedEvent.end_time }}</div>
+			<div><label>description:</label>{{ selectedEvent.description }}</div>
+		</div>
+	</li>
+</ul>
+
