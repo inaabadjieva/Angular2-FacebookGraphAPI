@@ -55,12 +55,12 @@ export class FacebookFormComponent {
 			if(res.paging.next != undefined) {
 				this.fb.getNextEvents(res.paging.next, this.allEvents, this.updateAllEvents);
 			} 
+
+			this.getMostActiveUsers();
 		});
-		
-		this.getMostActiveUsers();
 	}
 	
-	private getMostActiveUsers() {
+	private getMostActiveUsers() : void {
 		let uniqueUsers = new Map();
 		this.allEvents.forEach(e => {
 			e.attendees.forEach(a => {
