@@ -13,7 +13,8 @@ export class Event {
 }
 
 export class User {
-eventsAttended = 1;
+	
+	eventsAttended = 1;
 
 	constructor(
 		public id: string,
